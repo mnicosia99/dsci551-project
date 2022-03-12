@@ -10,6 +10,7 @@ import { ChartDataset, ChartOptions } from 'chart.js';
 
 export class ChartComponent {
 
+  // test
   // lineChartData: ChartDataSets[] = [
   //   { data: [85, 72, 78, 75, 77, 75], label: 'Crude oil prices' },
   // ];
