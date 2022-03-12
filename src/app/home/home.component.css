@@ -1,0 +1,21 @@
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    width: 1200px;
+    padding:0 !important;
+}
+
+.mat-card-header{
+    background-color:ROYALBLUE !important;
+    color: White;
+    padding:5px !important;
+    inset: 3px 3px 3px 3px;
+}
+
+.mat-card-content{
+    padding:1px !important;
+}
+  
