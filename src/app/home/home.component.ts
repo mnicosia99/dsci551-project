@@ -20,23 +20,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.dataService.sendGetRequestUsers().subscribe((data: any)=>{
-      if (data == null) {
-        console.log('Instance is null or undefined');
-      } else {
-        console.log(data);
-        this.users = data.users;
-        this.loadingUsers = false;
-      }
-    })  
-    this.dataService.sendGetRequestMessages().subscribe((data: any)=>{
-      if (data == null) {
-        console.log('Instance is null or undefined');
-      } else {
-        console.log(data);
-        this.messages = data.messages;
-        this.loadingMessages = false;
-      }
-    })  
   }
 }
