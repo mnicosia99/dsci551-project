@@ -5,6 +5,8 @@ import {DataService} from '../data.service';
 import {DynamicDialogRef} from 'primeng/dynamicdialog';
 import {DynamicDialogConfig} from 'primeng/dynamicdialog';
 
+import { ColumnFilterFormElement } from 'primeng/table';
+
 @Component({
     templateUrl: './announcements.component.html',
 })
@@ -31,3 +33,4 @@ export class AnnouncementComponent {
         });
     }
 }
+
