@@ -1,6 +1,8 @@
 import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,7 +53,11 @@ import { CesiumDirective } from './cesium.directive';
     TreeTableModule,
     InputTextareaModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy, useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [
       CUSTOM_ELEMENTS_SCHEMA,
