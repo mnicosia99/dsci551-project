@@ -27,6 +27,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { TableModule } from 'primeng/table';
 import { CesiumDirective } from './cesium.directive';
+import {PanelModule} from 'primeng/panel';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { CesiumDirective } from './cesium.directive';
     AccordionModule,
     DynamicDialogModule,
     TreeTableModule,
-    InputTextareaModule
+    InputTextareaModule,
+    PanelModule,
+    ButtonModule
   ],
   providers: [
     {

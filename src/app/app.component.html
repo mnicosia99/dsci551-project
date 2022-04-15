@@ -1,13 +1,13 @@
 <mat-toolbar color="primary" class="test-header">
-  <h1>
-    DCSI 551 Project 
-  </h1>
-  <p-toast></p-toast>
-  <button type="button" (click)="show()" pButton icon="pi pi-info-circle" label="Show"></button>
-
-  <!--button mat-button routerLink="/">Home</button>
-  <button mat-button routerLink="/about">About</button-->
-
+  <mat-toolbar-row>
+    <div>
+      <h1 style="float:left">DCSI 551 Project</h1>
+    </div>
+    <span class="flexExpand"></span>
+    <div>
+      <button (click)="show()" class="button-announcements" type="button" pButton style="float:right" label="Announcements" icon="fa-solid fa-square-info"></button>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
 <div fxLayout="row wrap" fxLayoutGap="16px"></div>
 <router-outlet></router-outlet>

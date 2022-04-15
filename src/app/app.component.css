@@ -1,3 +1,25 @@
+
 .test-header {
     background-color: ROYALBLUE;
+}
+
+.button-announcements {
+    background-color: ROYALBLUE;
+    padding: 10px 10px;
+    text-align: center;
+    box-sizing : content-box;
+    color: white;
+}
+
+.button-announcements:hover { 
+    background-color: ROYALBLUE;
+    padding: 10px 10px;
+    text-align: center;
+    box-sizing : content-box;
+    color: white;
+    border: 2px solid black;
+}
+
+.flexExpand {
+    flex: 1 1 auto;
 }
