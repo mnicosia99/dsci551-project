@@ -1,11 +1,18 @@
 import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import {DynamicDialogModule} from 'primeng/dynamicdialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {InputTextareaModule} from 'primeng/inputtextarea';
+
+import {AccordionModule} from 'primeng/accordion';
+import {TreeTableModule} from 'primeng/treetable';
+
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { AnnouncementComponent } from './announcements/announcements.component';
 import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -16,7 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
 import { CesiumDirective } from './cesium.directive';
 
 @NgModule({
@@ -24,7 +31,8 @@ import { CesiumDirective } from './cesium.directive';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    CesiumDirective
+    CesiumDirective,
+    AnnouncementComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +45,11 @@ import { CesiumDirective } from './cesium.directive';
     MatCardModule,
     MatProgressSpinnerModule,
     TableModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AccordionModule,
+    DynamicDialogModule,
+    TreeTableModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent],

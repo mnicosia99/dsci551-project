@@ -18,4 +18,17 @@
 .mat-card-content{
     padding:1px !important;
 }
-  
+
+p-accordionTab.header {
+    background-color:ROYALBLUE !important;
+    color: White;
+    padding:5px !important;
+    inset: 3px 3px 3px 3px;
+}
+
+.color-blue {
+    background-color:ROYALBLUE !important;
+    color: White;
+    padding:5px !important;
+    inset: 3px 3px 3px 3px;
+}
