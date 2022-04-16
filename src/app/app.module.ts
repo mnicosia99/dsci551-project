@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-import {DynamicDialogModule} from 'primeng/dynamicdialog';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import {InputTextareaModule} from 'primeng/inputtextarea';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
-import {AccordionModule} from 'primeng/accordion';
-import {TreeTableModule} from 'primeng/treetable';
+import { AccordionModule } from 'primeng/accordion';
+import { TreeTableModule } from 'primeng/treetable';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
@@ -27,8 +27,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { TableModule } from 'primeng/table';
 import { CesiumDirective } from './cesium.directive';
-import {PanelModule} from 'primeng/panel';
-import {ButtonModule} from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+import { ChartModule } from 'primeng/chart';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import {ButtonModule} from 'primeng/button';
     TreeTableModule,
     InputTextareaModule,
     PanelModule,
+    ChartModule,
     ButtonModule
   ],
   providers: [

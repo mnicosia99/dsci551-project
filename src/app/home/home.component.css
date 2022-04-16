@@ -1,3 +1,17 @@
+ul {
+    padding: 1em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1em auto;
+  }
+  
+  li {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    width: 50%;
+  }
 
 .content {
     padding: 16px;

@@ -29,6 +29,7 @@
     "body-parser": "^1.19.1",
     "cesium": "^1.90.0",
     "cesium-heatmap": "^0.0.4",
+    "chart.js": "^3.7.1",
     "express": "^4.17.2",
     "faker": "^6.6.6",
     "firebase": "^8.10.1",

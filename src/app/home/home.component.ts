@@ -20,6 +20,17 @@ export class HomeComponent implements OnInit {
   loadingCocs: boolean = true;
   a: TreeNode[] = [];
   expanded: boolean = false;
+  expandedCoc: boolean = false;
+  options = {
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: {
+          color: 'white'
+        }
+      }
+    }
+  };
 
   constructor(private dataService: DataService) { }
 
@@ -47,6 +58,61 @@ export class HomeComponent implements OnInit {
     this.dataService.sendGetRequestCocSummaries().subscribe((cocSummaries: CocSummaries) => {
       this.cocs = cocSummaries.coc_summaries;
       this.cocs.forEach(coc => {
+        coc.demographic_data_gender = {
+          labels: ["Female", "Male", "Non-Conforming", "Transgender"],
+          datasets: [
+            {
+              data: [
+                coc.homeless_breakdown.gender["female"], 
+                coc.homeless_breakdown.gender["male"], 
+                coc.homeless_breakdown.gender["gender_nonconforming"],
+                coc.homeless_breakdown.gender["transgender"]],
+              backgroundColor: ["#7FFFD4", "#FFE4C4", "#FF7F50", "#6495ED"],
+              color: ["#000000", "#000000", "#000000", "#000000"]
+            }
+          ]
+        }
+        coc.demographic_data_race = {
+          labels: ["African American", "Native American", "White", "Asian", "Multiple Races", "Pacific Islander"],
+          datasets: [
+            {
+              data: [
+                coc.homeless_breakdown.race["african_american"], 
+                coc.homeless_breakdown.race["native_american"], 
+                coc.homeless_breakdown.race["white"],
+                coc.homeless_breakdown.race["asian"],
+                coc.homeless_breakdown.race["multiple_races"],
+                coc.homeless_breakdown.race["pacific_islander"]],
+              backgroundColor: ["#7FFFD4", "#FFE4C4", "#FF7F50", "#6495ED", "#FF8C00","#B8860B"]
+            }
+          ]
+        }
+        
+        coc.demographic_data_age = {
+          labels: ["18-24", "Under 18", "Over 24"],
+          datasets: [
+            {
+              data: [
+                coc.homeless_breakdown.age["18_to_24"], 
+                coc.homeless_breakdown.age["under_18"], 
+                coc.homeless_breakdown.age["over_24"]],
+              backgroundColor: ["#7FFFD4", "#FFE4C4", "#FF7F50"]
+            }
+          ]
+        }
+
+        coc.demographic_data_ethnicity = {
+          labels: ["Hispanic/Latino", "Non-Hispanic/Latino"],
+          datasets: [
+            {
+              data: [
+                coc.homeless_breakdown.ethnicity["hispanic_latino"], 
+                coc.homeless_breakdown.ethnicity["non_hispanic_latino"]],
+              backgroundColor: ["#7FFFD4", "#FFE4C4"]
+            }
+          ]
+        }
+
         console.log(coc)
         let result = "";
         coc.counties.forEach(county => {
